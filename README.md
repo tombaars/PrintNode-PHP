@@ -45,7 +45,7 @@ Hint: Your API username is in the format description.integer, where description 
 Step 6: Get a list of computers, printers or printjobs which are available.
 To get a list of computers, printers or printjobs, create a new PrintNode\Request object, passing it your credentials as the argument to it's constructor.
 
-    $request = new PrintNode\Request($credentials)
+    $request = new PrintNode\Request($credentials);
 
 Hint: Before you can get a list of computers or printers, you must have successfully connected using the PrintNode Client software. If you have not yet connected with the client software you will not receive any results from the API.
 
@@ -63,7 +63,7 @@ PrintNode currently only accepts PDF documents. You can make your own PDFs or yo
 
 To print something, you need to create a new instance of PrintNode\PrintJob:
 
-    $printJob = new PrintNode\PrintJob();
+    $printJob = new PrintNode\Entities\PrintJob();
   
 You can then populate this object with the information about the print-job and add the base64-encoded content of, or the URI to your PDF. To do this use the properties as defined on the object. In this example, we're going to print a a base64-encoded PDF named invoice.pdf:
 
