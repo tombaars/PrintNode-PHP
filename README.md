@@ -79,9 +79,6 @@ Once you have populated the object, all that's left to do is submit it:
     $response = $request->post($printJob);
 
 The response returned from the post method is an instance of PrintNode\Response. It contains methods for retrieving the response headers, body and HTTP status-code and message.
-
-    // Returns an array contain the keys 'code' and 'message'
-    $status = $response->getStatus();
  
     // Returns the HTTP status code.
     $statusCode = $response->getStatusCode();
